@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <% erros.forEach( err => { %>
+            <li><%=err.param%> - <%=err.msg%></li>
+            <%}) %>
+        </ul>
+    </div>
+    <form action="/produtos" method="POST">
+        <div>
+            <label for="produto">Titulo:</label>
+            <input type="text" id="titulo" name="titulo" value="<%=produto.titulo%>" placeholder="coloque o titulo">
+        </div>
+        <div>
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" cols="10" rows="3" name="descricao" placeholder="descrição de produto"><%=produto.descricao%></textarea>
+        </div>
+        <div>
+            <label for="produto">Preço:</label>
+            <input type="text" id="preco" name="preco" value="<%=produto.preco%>" placeholder="coloque o preço">
+        </div>
+        <button id="botao">Cadastrar</button>
+    </form>
+</body>
+
+</html>
