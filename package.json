@@ -1,0 +1,15 @@
+{
+  "name": "casadocodigo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Henrique Costa Barbosa (parzivalEduardo)",
+  "license": "ISC",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "express": "^4.16.4"
+  }
+}
