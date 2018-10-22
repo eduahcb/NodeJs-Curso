@@ -1,6 +1,6 @@
 module.exports =  app => {
 
-    const produto = require('../../controllers/ProdutoController');
+    const produto = require('../controllers/ProdutoController');
 
     app.route('/produtos')
         .get( (req, res) => produto.gellAll(req, res))
