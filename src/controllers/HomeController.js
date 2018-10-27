@@ -10,7 +10,7 @@ exports.home = async(req, res) => {
 
 
     } catch (error) {
-        console.log('deu erro');
+        console.log(error);
 
     }
 }
