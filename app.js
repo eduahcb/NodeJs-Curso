@@ -4,6 +4,6 @@ const io = require('socket.io')(http);
 
 app.set('io', io);
 
-http.listen(3000, () => {
+http.listen(process.env.PORT, () => {
     console.log('servidor rodando');
 });
