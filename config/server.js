@@ -22,5 +22,15 @@ module.exports = () => {
         .then('connection')
         .into(app);
 
+    app.use( (req, res, next) => {
+        res.render('erros/404');
+        next();
+    });
+
+    app.use( (req, res, next) => {
+        res.render('erros/500');
+        next();
+    });
+
     return app;
 }
