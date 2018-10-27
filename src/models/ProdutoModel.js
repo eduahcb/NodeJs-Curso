@@ -21,3 +21,13 @@ exports.post = async(produto) => {
 
     return rows;
 }
+
+exports.getById = async(id) => {
+    const conn = await mysql.createConnection(global.config);
+
+    const [rows] = await conn.query('select * from livros where id = ?', [id]);
+
+    conn.end();
+
+    return rows;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/promocoes" method="POST">
+        <div>
+            <input type="text" name="mensagem" placeholder="coloque uma mensagem">
+        </div>
+        <div>
+            <select name="id">
+                <option value="" selected disabled>Livros</option>
+                <% livros.forEach(livro => { %>
+                    <option value="<%=livro.id%>"><%=livro.descricao%></option>
+                <% }) %>
+            </select>
+        </div>
+        <button id="promo-botao">Cadastrar</button>
+    </form>
+</body>
+
+</html>
